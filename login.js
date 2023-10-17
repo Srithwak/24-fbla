@@ -1,6 +1,10 @@
 //file won't work until error popup has been made
-const {fs, getJSON, uploadJSON, sortByID, findNextID, makeAccount, errorPopup} = require('./common.js');
+const {fs, getJSON, uploadJSON, sortByID, findNextID, makePartner, errorPopup} = require('./common.js');
 
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    logIn();
+});
 
 function login() {
   const username = document.querySelector('.user').value;
