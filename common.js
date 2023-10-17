@@ -41,7 +41,11 @@ function makePartner(name, description, money, resources, email, phone1, phone2,
   return partner;
 }
 
+function errorPopup() { //error popup function
+  
+}
+
 module.exports = {
-  fs, getJSON, uploadJSON, sortByID, findNextID, makePartner
+  fs, getJSON, uploadJSON, sortByID, findNextID, makePartner, errorPopup
 };
 
