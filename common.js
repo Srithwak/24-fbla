@@ -24,7 +24,7 @@ function findNextID(jsonFile) { //finds the next available ID to use
   return jsonData.length;
 }
 
-function makePartner(name, description, money, resources, email, phone1, phone2, website, socialMedia){
+function makeAccount(name, description, money, resources, email, phone1, phone2, website, socialMedia){
   let partner = {
     id: findNextID("partners.json"),
     name: name,
