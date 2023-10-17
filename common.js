@@ -46,6 +46,6 @@ function errorPopup() { //error popup function
 }
 
 module.exports = {
-  fs, getJSON, uploadJSON, sortByID, findNextID, makePartner, errorPopup
+  fs, getJSON, uploadJSON, sortByID, findNextID, makeAccount, errorPopup
 };
 
