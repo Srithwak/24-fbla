@@ -1,5 +1,5 @@
 //file won't work until error popup has been made
-const {fs, getJSON, uploadJSON, sortByID, findNextID, makePartner, errorPopup} = require('./common.js');
+const {fs, getJSON, uploadJSON, sortByID, findNextID, makeAccount, errorPopup} = require('./common.js');
 
 
 function login() {
