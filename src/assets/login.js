@@ -15,7 +15,7 @@ function login() {
    let accounts = getJSON(path.join(__dirname, '../database/accounts.json'));
    for (i of accounts)
       if (i.username == username && i.password == password) {
-         localStorage.setItem("object", JSON.stringify(i)); //sets the user object to localStorage
+         localStorage.setItem("id", JSON.stringify(i.id)); //sets the user object to localStorage (test this)
          // location.href = '';
          console.log(localStorage.getItem('object'));
          return;
