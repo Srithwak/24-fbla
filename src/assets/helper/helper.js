@@ -54,7 +54,6 @@ function makeSchoolAccount(username, password, email) { //not tested
     website: null,
     messages: [],
     socialMedia: [],
-    messages: [],
     associated: [],
     notes: [],
     hashKey: ""
@@ -65,6 +64,10 @@ function makeSchoolAccount(username, password, email) { //not tested
 
 function searchAttribute(attribute, data = getJSON(__dirname, '../database/accounts.json')) {
   return data.filter(obj => obj.hasOwnProperty(attribute)).map(obj => obj[attribute]);
+}
+
+function getObj(id){
+  return getJSON(__dirname, '../database/accounts.json').find(obj => obj.id == id);
 }
 
 function errorPopup() { //error popup function
