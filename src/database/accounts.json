@@ -11,6 +11,7 @@
     "website": "",
     "socialMedia": ["Facebook: pop1", "Instagram: pop2"],
     "messages": [],
+    "associated": [],
     "hashKey": ""
   },
   {
@@ -25,6 +26,7 @@
     "website": "",
     "socialMedia": [],
     "messages": [],
+    "associated": [],
     "hashKey": ""
   },
   {
@@ -39,6 +41,7 @@
     "website": "",
     "socialMedia": [],
     "messages": [],
+    "associated": [],
     "hashKey": ""
   },
   {
@@ -50,6 +53,7 @@
     "website": "sth.com",
     "messages": [],
     "socialMedia": [],
+    "associated": [],
     "notes": [{
       "partnerID": 0,
       "note": ""
