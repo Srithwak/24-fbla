@@ -29,13 +29,16 @@ function makePartnerAccount(username, password, description, email){ //not teste
     id: findNextID(__dirname, '../database/accounts.json'),
     username: username,
     password: password,
-    description: description,
+    description: null,
     money: 0,
     resources: [],
     email: email,
     phone: 0,
     website: "",
-    socialMedia: []
+    socialMedia: [],
+    messages: [],
+    associated: [],
+    hashKey: ""
   }
   uploadJSON(__dirname, '../database/accounts.json', getJSON(__dirname, '../database/accounts.json').push(account));
   return account;
@@ -51,6 +54,8 @@ function makeSchoolAccount(username, password, email) { //not tested
     website: null,
     messages: [],
     socialMedia: [],
+    messages: [],
+    associated: [],
     notes: [],
     hashKey: ""
   }
