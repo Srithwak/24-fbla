@@ -24,7 +24,7 @@ function findNextID(jsonFile = (__dirname, '../database/accounts.json')) { //fin
   return jsonData.length;
 }
 
-function makePartner(name, description, email){ //not tested
+function makePartnerAccount(name, description, email){ //not tested
   let account = {
     id: findNextID("accounts.json"),
     username: name,
