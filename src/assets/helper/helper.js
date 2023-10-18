@@ -12,11 +12,11 @@ function uploadJSON(file, data) { //overwrites JSON file and uploads with data
     console.log("Upload complete");
 }
 
-function sortByID(jsonFile) { //sorts the json file based on id
+function sortByID(jsonFile = (__dirname, '../database/accounts.json')) { //sorts the json file based on id
   return getJSON(jsonFile).sort((a, b) => a.id - b.id);
 }
 
-function findNextID(jsonFile) { //finds the next available ID to use
+function findNextID(jsonFile = (__dirname, '../database/accounts.json')) { //finds the next available ID to use
   let jsonData = sortByID(jsonFile);
   for(let i = 0; i < jsonData.length; i++)
     if(jsonData[i].id != i)
@@ -37,13 +37,13 @@ function makePartner(name, description, email){ //not tested
     website: "",
     socialMedia: []
   }
-  uploadJSON("accounts.json", getJSON('accounts.json').push(account));
+  uploadJSON(__dirname, '../database/accounts.json', getJSON(__dirname, '../database/accounts.json').push(account));
   return account;
 }
 
 function makeSchoolAccount(username, password, email) { //not tested
   let account = {
-    id: findNextID("accounts.json"),
+    id: findNextID(__dirname, '../database/accounts.json'),
     username: username,
     password: password,
     email: email,
@@ -54,7 +54,7 @@ function makeSchoolAccount(username, password, email) { //not tested
     notes: [],
     hashKey: ""
   }
-  uploadJSON("accounts.json", getJSON('accounts.json').push(account));
+  uploadJSON(__dirname, '../database/accounts.json', getJSON(__dirname, '../database/accounts.json').push(account));
   return account;
 }
 
