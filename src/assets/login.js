@@ -4,11 +4,11 @@ function login() {
    const username = document.querySelector('.username').value;
    const password = document.querySelector('.password').value;
    if (username == '') {
-      console.log('username is blank');
+      console.log('username is blank'); //errorPopup
       return;
    }
    else if (password == '') {
-      console.log('password is blank');
+      console.log('password is blank'); //errorPopup
       return;
    }
    //   let accounts = getJSON('accounts.json');
@@ -17,9 +17,9 @@ function login() {
       if (i.username == username && i.password == password) {
          localStorage.setItem("id", JSON.stringify(i.id)); //sets the user object to localStorage (test this)
          // location.href = '';
-         console.log(localStorage.getItem('object'));
+         // console.log(localStorage.getItem('object'));
          return;
       }
-   console.log('Incorrect username or password');
+   console.log('Incorrect username or password'); //errorPopup
    return;
 }
