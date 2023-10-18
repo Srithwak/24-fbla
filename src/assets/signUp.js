@@ -1,6 +1,6 @@
 //Has not been tested
 //line 20, 22 not complete
-const {fs, getJSON, uploadJSON, sortByID, findNextID, makePartnerAccount, makeSchoolAccount, errorPopup} = require('./common.js');
+const {fs, getJSON, uploadJSON, sortByID, findNextID, makePartnerAccount, makeSchoolAccount, errorPopup} = require('./helper/helper');
 
 function toRun(){
   const username = document.querySelector(".username").value;
