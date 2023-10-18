@@ -58,11 +58,15 @@ function makeSchoolAccount(username, password, email) { //not tested
   return account;
 }
 
+function searchAttribute(attribute, data = getJSON(__dirname, '../database/accounts.json')) {
+  return data.filter(obj => obj.hasOwnProperty(attribute)).map(obj => obj[attribute]);
+}
+
 function errorPopup() { //error popup function
   
 }
 
 module.exports = {
-  fs, getJSON, uploadJSON, sortByID, findNextID, makePartnerAccount, makeSchoolAccount, errorPopup
+  fs, getJSON, uploadJSON, sortByID, findNextID, makePartnerAccount, makeSchoolAccount, searchAttribute, errorPopup
 };
 
