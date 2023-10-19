@@ -31,8 +31,6 @@ function makePartnerAccount(username, password, email) { //not tested
       username: username,
       password: password,
       description: null,
-      money: 0,
-      resources: [],
       email: email,
       phone: 0,
       website: "",
