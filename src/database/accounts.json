@@ -52,6 +52,11 @@
       "money": null,
       "resources": []
     }],
+    "otherAssociated": [{
+      "name": "pop9",
+      "money": null,
+      "resources": []
+    }],
     "notes": [{
       "id": 0,
       "note": ""
