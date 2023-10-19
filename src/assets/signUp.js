@@ -1,36 +1,39 @@
 //Has not been tested
 //line 20, 22 not complete
-const {fs, getJSON, uploadJSON, sortByID, findNextID, makePartnerAccount, makeSchoolAccount, errorPopup} = require('./helper/helper');
+const { makePartnerAccount, makeSchoolAccount, searchAttribute } = require('./helper/helper');
 
-function toRun(){
-  const username = document.querySelector(".username").value;
-  const password1 = document.querySelector(".password1").value;
-  const password2 = document.querySelector(".password2").value;
-  const email = document.querySelector(".email").value;
-  if(searchAttribute('username').includes(username)){
-    console.log("Username already exists"); //errorPopup
-    return false;
-  } else if(searchAttribute('email').includes(email)){
-    console.log("Email already exists"); //errorPopup
-    return false;
-  } 
-  else if(password1 != password2){
-    console.log("Passwords do not match"); //errorPopup
-    return false;
-  } //else if- password restrictions
-  let partner = false, school = false;
-  //include an option to select partner or school account, it should just toggle partner or school, it should also make sure to check the html that only one can be selected at a time, radio buttons or sth
-  if(document.querySelector(".partner").checked)
-    partner = true;
-  else if(document.querySelector(".school").checked)
-    school = true;
-  else {
-    console.log("No account type selected"); //errorPopup
-    return false;
-  }
-  if(partner)
-    makePartnerAccount(username, password, email);
-  else if(school)
-    makeSchoolAccount(username, password, email);
-  location.href = 'login.html';
+// function isValidPwd(pwd) {
+//    (/^[A-Za-z0-9]/)
+// }
+
+function toRun() {
+   const username = document.querySelector(".username").value;
+   const password1 = document.querySelector(".password1").value;
+   const password2 = document.querySelector(".password2").value;
+   const email = document.querySelector(".email").value;
+
+   if (searchAttribute('username').includes(username)) return console.log("Username already exists"); //errorPopup
+   else if (searchAttribute('email').includes(email)) return console.log("Email already exists"); //errorPopup
+   else if (password1 != password2) return console.log("Passwords do not match"); //errorPopup
+   else if (!(username.match(/^[a-zA-Z0-9]{4,}$/))) return console.log('Invalid username')
+   else if (!(password2.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/))) return console.log('Invlaid password');
+   else if (!(email.match(/^[a-zA-Z0-9.]+@gmail\.com$/))) return console.log('MAKE A GMAIL ACCOUNT U SICK FUCK')
+   else if (!(email.match(/^[a-zA-Z0-9.]+@yahoo\.com$/))) return console.log('MAKE A YAHOO ACCOUNT U SICK FUCK')
+   else if (!(email.match(/^[a-zA-Z0-9.]+@hotmail\.com$/))) return console.log('MAKE A HOTMAIL ACCOUNT U SICK FUCK')
+   else if (!(email.match(/^[a-zA-Z0-9.]+@outlook\.com$/))) return console.log('MAKE A OUTLOOK ACCOUNT U SICK FUCK')
+
+   let partner = false, school = false;
+   if (document.querySelector(".partner").checked)
+      partner = true;
+   else if (document.querySelector(".school").checked)
+      school = true;
+   else {
+      console.log("No account type selected"); //errorPopup
+      return false;
+   }
+   if (partner)
+      makePartnerAccount(username, password1, email);
+   else if (school)
+      makeSchoolAccount(username, password1, email);
+   // location.href = 'login.html';
 }
