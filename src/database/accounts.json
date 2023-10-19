@@ -4,8 +4,6 @@
     "username": "name1",
     "password": "pwd1",
     "description": "",
-    "money": 23,
-    "resources": [],
     "email": "pop@gmail.com",
     "phone": 8888888888,
     "website": "",
@@ -19,8 +17,6 @@
     "username": "name2",
     "password": "pwd2",
     "description": "",
-    "money": 5,
-    "resources": [],
     "email": "abc@gmail.com",
     "phone": 1111111111,
     "website": "",
@@ -34,8 +30,6 @@
     "username": "name3",
     "password": "pwd3",
     "description": "",
-    "money": 15,
-    "resources": [],
     "email": "xyz@gmail.com",
     "phone": 5555555555,
     "website": "",
@@ -53,9 +47,13 @@
     "website": "sth.com",
     "messages": [],
     "socialMedia": [],
-    "associated": [],
+    "associated": [{
+      "id": 0,
+      "money": null,
+      "resources": []
+    }],
     "notes": [{
-      "partnerID": 0,
+      "id": 0,
       "note": ""
     }],
     "hashKey": ""
